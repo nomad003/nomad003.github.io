@@ -1,0 +1,43 @@
+name: pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check static homepage
+        run: |
+          test -f index.html
+          test -f 404.html
+          test -f styles.css
+          test -f main.js
+          test -f favicon.svg
+          test -f .nojekyll
+          test -f fonts/inter-latin.woff2
+          test -f fonts/OFL.txt
+          python3 - << 'PY'
+          from pathlib import Path
+          files = ["index.html", "404.html", "main.js", "styles.css"]
+          text = "\n".join(Path(name).read_text(encoding="utf-8") for name in files)
+          required = ["陈垚", "nomad003", "n-workspace", "pi-analysis", "#5b63d3"]
+          for item in required:
+              if item not in text:
+                  raise SystemExit(f"missing {item}")
+          lowered = text.lower()
+          banned = ["mailto:", "n-life-data", "n-knowledge-base", "googletagmanager", "google-analytics"]
+          for item in banned:
+              if item in lowered:
+                  raise SystemExit(f"disallowed content: {item}")
+          if 'src="http' in lowered or "src='http" in lowered:
+              raise SystemExit("third-party script")
+          print("static homepage ok")
+          PY
