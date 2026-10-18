@@ -28,12 +28,12 @@ jobs:
           from pathlib import Path
           files = ["index.html", "404.html", "main.js", "styles.css", "README.md"]
           text = "\n".join(Path(name).read_text(encoding="utf-8") for name in files)
-          required = ["Nomad", "nomad003", "n-workspace", "pi-analysis", "游戏后端", "#5b63d3"]
+          required = ["Nomad", "nomad003", "n-workspace", "pi-analysis", "游戏后端", "内核", "#5b63d3"]
           for item in required:
               if item not in text:
                   raise SystemExit(f"missing {item}")
           lowered = text.lower()
-          banned = ["mailto:", "n-life-data", "n-knowledge-base", "googletagmanager", "google-analytics", "陈垚", "chen yao", "系统编程", "内核"]
+          banned = ["mailto:", "n-life-data", "n-knowledge-base", "googletagmanager", "google-analytics", "陈垚", "chen yao", "内核工程师", "系统程序员", "不是工作", "不是本职", "ai 赋能"]
           for item in banned:
               if item in lowered:
                   raise SystemExit(f"disallowed content: {item}")
