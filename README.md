@@ -1,6 +1,6 @@
 # nomad003.github.io
 
-[Nomad](https://nomad003.github.io) 的公开主页。游戏后端，正在学 AI Agent，也关注内核和 Linux。静态 HTML / CSS / JS，无构建，无统计。
+[Nomad](https://nomad003.github.io) 的公开主页。游戏后端，也看内核、Linux 和 Agent。静态 HTML / CSS / JS，无构建，无统计。
 
 视觉与 [n-workspace](https://github.com/nomad003/n-workspace) 相同：中性色、靛蓝 `#5B63D3`、字号 12/14/17/26、间距 4/8/16/24/32、明暗主题。
 
