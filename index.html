@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="陈垚（Chen Yao），上海。系统编程、游戏服务与 AI Agent。GitHub：nomad003。">
+  <meta name="theme-color" content="#FBFBFA">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="陈垚 · nomad003">
+  <meta property="og:description" content="陈垚（Chen Yao），上海。系统编程、游戏服务与 AI Agent。">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://nomad003.github.io/">
+  <meta property="og:locale" content="zh_CN">
+  <title>陈垚 · nomad003</title>
+  <link rel="canonical" href="https://nomad003.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search).get("theme");
+        var s = localStorage.getItem("theme");
+        var dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var t = q === "light" || q === "dark" ? q : (s === "light" || s === "dark" ? s : (dark ? "dark" : "light"));
+        var el = document.documentElement;
+        el.setAttribute("data-theme", t);
+        el.style.colorScheme = t;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute("content", t === "dark" ? "#111113" : "#FBFBFA");
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "陈垚",
+    "alternateName": ["Chen Yao", "nomad003"],
+    "url": "https://nomad003.github.io/",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Shanghai"
+    },
+    "sameAs": ["https://github.com/nomad003"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#about">跳到内容</a>
+  <aside class="side">
+    <a class="me" href="#top">
+      <span class="av" aria-hidden="true">n</span>
+      <span>
+        <span class="nm">nomad003</span>
+        <span class="ns">公开主页</span>
+      </span>
+    </a>
+    <div class="navh">页面</div>
+    <nav aria-label="页面">
+      <a class="ni on" href="#top" aria-current="true">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="2.2" width="4.6" height="4.6" rx="1" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="9.2" y="2.2" width="4.6" height="4.6" rx="1" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="2.2" y="9.2" width="4.6" height="4.6" rx="1" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="9.2" y="9.2" width="4.6" height="4.6" rx="1" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+        <span>概览</span>
+      </a>
+      <a class="ni" href="#about">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="5.2" r="2.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3.4 13.2c.7-2.2 2.3-3.3 4.6-3.3s3.9 1.1 4.6 3.3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <span>关于</span>
+      </a>
+      <a class="ni" href="#focus">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8 13.4 4.6 8 7.4 2.6 4.6 8 1.8Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M2.6 8 8 10.8 13.4 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.6 11.2 8 14 13.4 11.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>方向</span>
+        <span class="c">4</span>
+      </a>
+      <a class="ni" href="#projects">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.8 4.2h4.1l1.3 1.6H14.2V13H1.8V4.2Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        <span>项目</span>
+        <span class="c">3</span>
+      </a>
+    </nav>
+    <div class="side-foot">
+      <div class="mono">nomad003</div>
+      <div>公开页面</div>
+    </div>
+  </aside>
+
+  <main id="top">
+    <header class="ph">
+      <div class="ph-row">
+        <div class="ph-main">
+          <p class="ctx">
+            <span id="today">公开主页</span>
+            <span class="sep" aria-hidden="true">/</span>
+            <span>上海 Shanghai</span>
+            <span class="sep" aria-hidden="true">/</span>
+            <span>nomad003</span>
+          </p>
+          <h1>陈垚</h1>
+          <p class="lede">系统程序员，做内核、游戏服务和 AI Agent。 <span class="en" lang="en">Systems, game servers, agents.</span></p>
+        </div>
+        <div class="ph-act">
+          <button class="btn" id="theme-toggle" type="button" aria-pressed="false" aria-label="切换到深色">
+            <span class="when-light">深色</span>
+            <span class="when-dark">浅色</span>
+          </button>
+          <a class="btn primary" rel="me noreferrer" href="https://github.com/nomad003">GitHub</a>
+        </div>
+      </div>
+      <div class="kpis">
+        <a class="kpi focus" href="#focus">
+          <div class="kpi-k">方向</div>
+          <div class="kpi-n">4</div>
+          <div class="kpi-s">系统 · 游戏 · Agent · 工具</div>
+        </a>
+        <a class="kpi" href="#projects">
+          <div class="kpi-k">公开仓库</div>
+          <div class="kpi-n">3</div>
+          <div class="kpi-s">n-workspace 等</div>
+        </a>
+        <a class="kpi" rel="noreferrer" href="https://github.com/nomad003">
+          <div class="kpi-k">开始</div>
+          <div class="kpi-n">2018</div>
+          <div class="kpi-s">GitHub · nomad003</div>
+        </a>
+        <div class="kpi">
+          <div class="kpi-k">所在</div>
+          <div class="kpi-n">上海</div>
+          <div class="kpi-s">Shanghai</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="body">
+      <section id="about">
+        <div class="sstrip">
+          <b>关于</b>
+          <span lang="en">About</span>
+        </div>
+        <div class="g12">
+          <article class="box c8">
+            <div class="box-h">
+              <h2>陈垚</h2>
+              <span class="box-m" lang="en">Chen Yao</span>
+            </div>
+            <div class="box-b prose">
+              <p>在上海写系统软件。公开的兴趣是操作系统内核和 Linux 内部机制，游戏引擎与游戏服务器，以及 AI Agent 的运行时、代码助手和知识库。</p>
+              <p><a href="#projects">n-workspace</a> 是自己用的生活与工作面板，vanilla JavaScript。这个主页沿用它的字体、间距和靛蓝，只保留可以公开的内容。</p>
+            </div>
+          </article>
+          <article class="box c4">
+            <div class="box-h">
+              <h2>档案</h2>
+              <span class="box-m" lang="en">Profile</span>
+            </div>
+            <div class="rows">
+              <div class="row"><span class="k">姓名</span><span class="v">陈垚</span></div>
+              <div class="row"><span class="k">英文</span><span class="v" lang="en">Chen Yao</span></div>
+              <div class="row"><span class="k">所在</span><span class="v">上海</span></div>
+              <a class="row" rel="noreferrer" href="https://github.com/nomad003"><span class="k">GitHub</span><span class="v">nomad003</span></a>
+              <a class="row" href="#projects"><span class="k">公开仓库</span><span class="v">3</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="focus">
+        <div class="sstrip">
+          <b>方向</b>
+          <span lang="en">Focus</span>
+          <span class="muted">4</span>
+        </div>
+        <div class="tgrid">
+          <article class="box">
+            <div class="box-h">
+              <h2>系统编程</h2>
+              <span class="box-m" lang="en">Systems</span>
+            </div>
+            <div class="box-b">
+              <p>操作系统内核与 Linux 内部机制。调度、内存、可观察性，尽量追到源码和能复现的行为。</p>
+            </div>
+            <div class="box-f">内核 · Linux</div>
+          </article>
+          <article class="box">
+            <div class="box-h">
+              <h2>游戏服务</h2>
+              <span class="box-m" lang="en">Game servers</span>
+            </div>
+            <div class="box-b">
+              <p>游戏引擎和多人游戏服务器。房间、状态同步，以及只有在负载下才出现的问题。</p>
+            </div>
+            <div class="box-f">引擎 · 服务器</div>
+          </article>
+          <article class="box">
+            <div class="box-h">
+              <h2>AI Agent</h2>
+              <span class="box-m" lang="en">Agents</span>
+            </div>
+            <div class="box-b">
+              <p>Agent 运行时、代码助手和知识库。关心工具调用、上下文，以及能放进每天工作流的部分。</p>
+            </div>
+            <div class="box-f">Runtime · 知识库</div>
+          </article>
+          <article class="box">
+            <div class="box-h">
+              <h2>个人工具</h2>
+              <span class="box-m" lang="en">Tooling</span>
+            </div>
+            <div class="box-b">
+              <p>给自己用的面板和静态站点。Vanilla JS，本地优先，依赖少，界面保持克制。</p>
+            </div>
+            <div class="box-f"><a href="#projects">n-workspace</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="sstrip">
+          <b>项目</b>
+          <span lang="en">Projects</span>
+          <span class="muted">3</span>
+        </div>
+        <div class="g12">
+          <article class="box focus c8">
+            <div class="box-h">
+              <h2>n-workspace</h2>
+              <span class="box-m">重点</span>
+              <a class="link" rel="noreferrer" href="https://github.com/nomad003/n-workspace">GitHub</a>
+            </div>
+            <div class="box-b">
+              <p class="lead">个人生活与工作面板。</p>
+              <p class="prose">Vanilla JavaScript。今天、计划、知识与 Agent 放在同一套界面里：中性色，一种靛蓝，明暗主题。本页的字号、间距和颜色与它对齐。</p>
+              <div class="pills">
+                <span class="pill accent">JavaScript</span>
+                <span class="pill">CSS</span>
+                <span class="pill">vanilla</span>
+              </div>
+            </div>
+            <div class="box-f">最近更新 10/17 · <a rel="noreferrer" href="https://github.com/nomad003/n-workspace">github.com/nomad003/n-workspace</a></div>
+          </article>
+          <div class="stack c4">
+            <article class="box">
+              <div class="box-h">
+                <h2>pi-analysis</h2>
+                <a class="box-m" rel="noreferrer" href="https://github.com/nomad003/pi-analysis">GitHub</a>
+              </div>
+              <div class="box-b">
+                <p>开源项目 earendil-works/pi 的架构图解。中英双语、手工 SVG 和幻灯片，静态页面可离线阅读。</p>
+                <p><a rel="noreferrer" href="https://pi-analysis.pages.dev/">pi-analysis.pages.dev</a></p>
+              </div>
+              <div class="box-f">HTML · 最近更新 10/15</div>
+            </article>
+            <article class="box">
+              <div class="box-h">
+                <h2>本站</h2>
+                <a class="box-m" rel="noreferrer" href="https://github.com/nomad003/nomad003.github.io">源码</a>
+              </div>
+              <div class="box-b">
+                <p>nomad003.github.io。静态 HTML，由 GitHub Pages 从 main 根目录发布。</p>
+              </div>
+              <div class="box-f">HTML · CSS · JS</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="colophon">
+        <span>© 2026 陈垚</span>
+        <a rel="me noreferrer" href="https://github.com/nomad003">GitHub</a>
+        <span>上海</span>
+      </footer>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
