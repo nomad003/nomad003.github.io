@@ -33,7 +33,7 @@ jobs:
               if item not in text:
                   raise SystemExit(f"missing {item}")
           lowered = text.lower()
-          banned = ["mailto:", "n-life-data", "n-knowledge-base", "googletagmanager", "google-analytics", "陈垚", "chen yao"]
+          banned = ["mailto:", "n-life-data", "n-knowledge-base", "googletagmanager", "google-analytics", "陈垚", "chen yao", "系统编程", "内核"]
           for item in banned:
               if item in lowered:
                   raise SystemExit(f"disallowed content: {item}")
