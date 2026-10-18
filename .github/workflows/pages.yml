@@ -26,14 +26,14 @@ jobs:
           test -f fonts/OFL.txt
           python3 - << 'PY'
           from pathlib import Path
-          files = ["index.html", "404.html", "main.js", "styles.css"]
+          files = ["index.html", "404.html", "main.js", "styles.css", "README.md"]
           text = "\n".join(Path(name).read_text(encoding="utf-8") for name in files)
-          required = ["陈垚", "nomad003", "n-workspace", "pi-analysis", "#5b63d3"]
+          required = ["Nomad", "nomad003", "n-workspace", "pi-analysis", "游戏后端", "#5b63d3"]
           for item in required:
               if item not in text:
                   raise SystemExit(f"missing {item}")
           lowered = text.lower()
-          banned = ["mailto:", "n-life-data", "n-knowledge-base", "googletagmanager", "google-analytics"]
+          banned = ["mailto:", "n-life-data", "n-knowledge-base", "googletagmanager", "google-analytics", "陈垚", "chen yao"]
           for item in banned:
               if item in lowered:
                   raise SystemExit(f"disallowed content: {item}")
